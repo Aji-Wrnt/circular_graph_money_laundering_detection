@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================================
+# Large Datasets & Processed Files (GitHub limit is 100MB)
+# ==========================================================
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*.csv
+!data/processed/.gitkeep
+!data/processed/subgraphs_metadata.csv
+
+# PyTorch Geometric graph tensors and model weights
+data/processed/subgraphs/*
+!data/processed/subgraphs/.gitkeep
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Compressed files & logs
+*.tar.gz
+*.zip
+*.log
