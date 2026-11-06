@@ -48,9 +48,8 @@ venv.bak/
 Thumbs.db
 desktop.ini
 
-# ==========================================================
+
 # Large Datasets & Processed Files (GitHub limit is 100MB)
-# ==========================================================
 data/raw/*
 !data/raw/.gitkeep
 
@@ -70,3 +69,6 @@ data/processed/subgraphs/*
 *.tar.gz
 *.zip
 *.log
+
+# penanda
+penanda/

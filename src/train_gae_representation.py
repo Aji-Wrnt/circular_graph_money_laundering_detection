@@ -71,9 +71,7 @@ def run_unsupervised_gae_pipeline(
     learning_rate=0.005,
     embedding_dim=16
 ):
-    print("=" * 65)
-    print(" [STAGE 3] UNSUPERVISED GRAPH AUTOENCODER (GAE) PIPELINE")
-    print("=" * 65)
+    print("Starting Stage 3: Unsupervised Graph Autoencoder (GAE) Pipeline")
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"[*] Compute Device : {device.type.upper()} ({torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'})")
@@ -140,9 +138,7 @@ def run_unsupervised_gae_pipeline(
     total_time = time.time() - total_start_time
     file_size_mb = os.path.getsize(output_features_csv) / (1024 * 1024)
 
-    print("\n" + "=" * 65)
-    print("                    STAGE 3 SUMMARY REPORT                    ")
-    print("=" * 65)
+    print("___STAGE 3 SUMMARY REPORT___")
     print(f"Total Subgraphs Processed : {len(subgraph_files)}")
     print(f"Total Edge Instances      : {len(df_all_features):,} rows (including 50% overlap)")
     print(f"Unique Transactions (TxID): {df_all_features['TxID'].nunique():,}")
@@ -150,8 +146,7 @@ def run_unsupervised_gae_pipeline(
     print(f"File Size                 : {file_size_mb:.2f} MB")
     print(f"Total Computation Time    : {total_time:.2f} seconds ({total_time/60:.2f} minutes)")
     print(f"Target Output Path        : {output_features_csv}")
-    print("=" * 65)
-    print("[+] Stage 3 Completed! Ready for Stage 4: Feature Fusion & Aggregation.\n")
+    print("Stage 3 completed. Ready for Stage 4: Feature Fusion & Aggregation.\n")
 
 if __name__ == "__main__":
     run_unsupervised_gae_pipeline()
